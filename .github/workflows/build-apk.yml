@@ -43,7 +43,7 @@ jobs:
     - name: Build with Gradle Wrapper
       run: ./gradlew build
     - name: Grandle Permission Again
-      run: chmod +x gradlew
+      run: chmod +x EpsilonVpn/gradlew
     - name: Build APK
       working-directory: EpsilonVpn       # <-- ریشه پروژه
       run: ./gradlew assembleDebug
