@@ -39,24 +39,24 @@ jobs:
 
       # 6️⃣ ساخت Debug APK
       - name: Build Debug APK
-        working-directory: EpsilonVpn
-        run: ./gradlew assembleDebug
+        working-directory: ./EpsilonVpn
+        run: ./gradlew :app:assembleDebug
 
       # 7️⃣ ساخت Release APK
       - name: Build Release APK
-        working-directory: EpsilonVpn
-        run: ./gradlew assembleRelease
+        working-directory: ./EpsilonVpn
+        run: ./gradlew :app:assembleRelease
 
       # 8️⃣ آپلود Debug APK
       - name: Upload Debug APK
         uses: actions/upload-artifact@v5
         with:
           name: EpsilonVPN-debug.apk
-          path: EpsilonVpn/app/build/outputs/apk/debug/app-debug.apk
+          path: ./EpsilonVpn/app/build/outputs/apk/debug/app-debug.apk
 
       # 9️⃣ آپلود Release APK
       - name: Upload Release APK
         uses: actions/upload-artifact@v5
         with:
           name: EpsilonVPN-release.apk
-          path: EpsilonVpn/app/build/outputs/apk/release/app-release.apk
+          path: ./EpsilonVpn/app/build/outputs/apk/release/app-release.apk
