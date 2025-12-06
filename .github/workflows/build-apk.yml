@@ -34,15 +34,11 @@ jobs:
 
       - name: Build Debug APK
         working-directory: ./EpsilonVpn
-        run: |
-          unset MSYS
-          bash ./gradlew :app:assembleDebug --no-daemon
+        run: env -u MSYS bash ./gradlew :app:assembleDebug --no-daemon
 
       - name: Build Release APK
         working-directory: ./EpsilonVpn
-        run: |
-          unset MSYS
-          bash ./gradlew :app:assembleRelease --no-daemon
+        run: env -u MSYS bash ./gradlew :app:assembleRelease --no-daemon
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v5
