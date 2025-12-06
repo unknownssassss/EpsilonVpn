@@ -1,2 +1,2 @@
-rootProject.name = "EpsilonVPN"
+rootProject.name = "EpsilonVpn"
 include ':app'
