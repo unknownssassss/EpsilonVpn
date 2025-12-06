@@ -40,12 +40,12 @@ jobs:
       # 6️⃣ ساخت Debug APK
       - name: Build Debug APK
         working-directory: ./EpsilonVpn
-        run: ./gradlew :app:assembleDebug
+        run: bash ./gradlew assembleDebug
 
       # 7️⃣ ساخت Release APK
       - name: Build Release APK
         working-directory: ./EpsilonVpn
-        run: ./gradlew :app:assembleRelease
+        run: bash ./gradlew assembleRelease
 
       # 8️⃣ آپلود Debug APK
       - name: Upload Debug APK
